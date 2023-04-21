@@ -34,7 +34,7 @@ The Flight Search page allows users to input their trip details, including the d
 
 ## Method
 
-In this project, a diverse range of Python concepts we learned from 5001 were employed, such as **iteration**, **dictionaries**, **file handling**, and **error handling**. To effectively tackle the overarching problem, it was broken down into a series of smaller, manageable tasks. Each of these tasks was addressed by implementing dedicated class functions, resulting in a modular and efficient solution :
+In this project, a diverse range of Python concepts we learned from 5001 were employed, such as **divide-and- conquer**, **for loop**, **if..statment**, **dictionaries**, **classes**,  **file handling**, and **error handling** etc. To effectively tackle the overarching problem, it was broken down into a series of smaller, manageable tasks. Each of these tasks was addressed by implementing dedicated class functions, resulting in a modular and efficient solution :
 
 ### 1. Web Scraping 
 
