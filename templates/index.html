@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search Application</title>
+    <style>
+        /* Import custom fonts */
+        @font-face {
+            font-family: 'The Seasons';
+            src: url(static, '/fonts/theseasons-reg.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'TT Commons Pro Expand';
+            src: url(static, '/fonts/TT Commons Thin.otf') format('opentype');
+        }
+
+        /* Set background image for body */
+        body {
+            background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* Style the title */
+        h1 {
+            font-family: 'The Seasons', sans-serif;
+            font-size: 60pt;
+            text-align: center;
+            color: #69443C;
+        }
+
+        /* Style the container */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Style the form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-bg {
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Style the form elements */
+        label, input, button {
+            font-family: 'TT Commons Pro Expand', sans-serif;
+        }
+
+        /* Style the results */
+        .results {
+            display: none;
+            border-top: 2px solid #ccc;
+            padding-top: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        /* Style the table */
+        table {
+            width: 100%;
+            background-color: rgba(96, 135, 170,0.6);
+            border-collapse: collapse;
+        }
+
+        /* Style the table cells */
+        th, td {
+            padding: 10px;
+            text-align: left;
+            color: #fff;
+        }
+
+        /* Style the table headers */
+        th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flight Search</h1>
+    <div class="container">
+        <form method="POST">
+            <div class="form-bg">
+                <label for="departure">Departure:</label>
+                <input type="text" id="departure" name="departure" required>
+                <label for="arrival">Arrival:</label>
+                <input type="text" id="arrival" name="arrival" required>
+                <label for="departure_date">Departure Date:</label>
+                <input type="date" id="departure_date" name="departure_date" required>
+                <label for="return_date">Return Date:</label>
+                 <input type="date" id="return_date" name="return_date" required>
+            </div>
+            <button type="submit">Search Flights</button>
+        </form>
+        <div id="results">
+            {% if flight_options %}
+                <table>
+                    <thead>
+                        <tr>
+                            {% for header in flight_headers %}
+                                <th>{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in flight_options %}
+                            <tr>
+                                {% for cell in row %}
+                                    <td>{{ cell }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
