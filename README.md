@@ -125,10 +125,6 @@ python app.py
 
   
 
-## Demo of Flight Search
-
-<img src="/Users/xiaotihu/Documents/NEU/CS5001/02-Final Project/Final presentation/img/FlightSearch_preview.gif" style="zoom: 33%;" />
-
 ## References
 
 ### Key tutorials
