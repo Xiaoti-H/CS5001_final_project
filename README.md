@@ -124,7 +124,7 @@ python app.py
 - Building a customized HTML webpage is a challenge for me. However, it is always good to find references that has similar structure and/or portion(s).
 
 ## References 
-<img src="/Users/xiaotihu/Documents/NEU/CS5001/02-Final Project/Final presentation/img/FlightSearch_preview.gif" style="zoom: 33%;" />
+<img src="FlightSearch_preview.gif" style="zoom: 33%;" />
 
 ## References
 
